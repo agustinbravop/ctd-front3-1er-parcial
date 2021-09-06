@@ -9,30 +9,37 @@ export default class Story extends React.Component {
   state = {
     count: 1,
     prevSelection: "",
-    id: "1"
+    currentId: "1"
   }
 
   handleSelect = e => {
-    // Matches id from data.json
-
-    const id = this.state.count + 1 + e.target.id.toLowerCase();
-    /* 
-    console.log(e);
-    console.log(e.target);
-    console.log("Target id: " + e.target.id); 
-    */
-    this.setState({
-      count: this.state.count + 1,
-      prevSelection: e.target.id,
-      id: id
-    })
+    // Matches id from data.json's id
+    if(this.state.count > 4) {
+      alert("Fin.");
+    } 
+    else {
+      const currentId = this.state.count + 1 + e.target.id.toLowerCase();
+      
+      /* 
+      console.log(e);
+      console.log(e.target);
+      console.log("Target id: " + e.target.id); 
+      */
+      this.setState({
+        count: this.state.count + 1,
+        prevSelection: e.target.id,
+        currentId: currentId
+      })
+    }
   }
 
   render() {
     // Gets matching id object from data.json
-    const d = data.find(el => el.id = this.state.id);
-
+    const d = data.find(el => el.id === this.state.currentId);
+    /* 
     console.log(this.state);
+    console.log(d); 
+    */
     return (
       <>
         <p>{d.historia}</p>

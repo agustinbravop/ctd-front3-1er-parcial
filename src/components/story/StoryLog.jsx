@@ -6,26 +6,35 @@ export default class StoryLog extends React.Component {
     history: []
   }
 
-  static getDerivedStateFromProps(prevProps, prevState){
+  static getDerivedStateFromProps(props, state){
     // prevSelection is added to the history
-    if(prevProps.prevSelection !== "") {
+    console.log("getDerivedStateFromProps: ")
+    console.log(props)
+    console.log(state)
+
+    if(props.prevSelection !== "") {
       return {
-        history:  [prevProps.prevSelection, ...prevState.history]
+        history:  [...state.history, props.prevSelection]
       }
     } else {
-      return null
+      return null;
     }
   }
 
   render() {
     const { prevSelection } = this.props;
+    console.log("render: ");
+    /*
+    console.log(this.props)
+    console.log(this.state)
+    */
 
     return (
       <>
         <p>Selección anterior: {prevSelection}</p>
         <p>Historial de opciones elegidas:</p>
         <ul>
-          {this.state.history.map((el, i) => <li key={i}>{el}</li>)}
+          {this.state.history.slice(0, -1).map((el, i) => <li key={i}>{el}</li>)}
         </ul>
       </>
     )
