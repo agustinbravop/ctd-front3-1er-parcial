@@ -8,9 +8,6 @@ export default class StoryLog extends React.Component {
 
   static getDerivedStateFromProps(props, state){
     // prevSelection is added to the history
-    console.log("getDerivedStateFromProps: ")
-    console.log(props)
-    console.log(state)
 
     if(props.prevSelection !== "") {
       return {
@@ -23,16 +20,11 @@ export default class StoryLog extends React.Component {
 
   render() {
     const { prevSelection } = this.props;
-    console.log("render: ");
-    /*
-    console.log(this.props)
-    console.log(this.state)
-    */
 
     return (
       <>
-        <p>Selección anterior: {prevSelection}</p>
-        <p>Historial de opciones elegidas:</p>
+        <h3>Selección anterior: {prevSelection}</h3>
+        <h4>Historial de opciones elegidas:</h4>
         <ul>
           {this.state.history.slice(0, -1).map((el, i) => <li key={i}>{el}</li>)}
         </ul>

@@ -19,12 +19,7 @@ export default class Story extends React.Component {
     } 
     else {
       const currentId = this.state.count + 1 + e.target.id.toLowerCase();
-      
-      /* 
-      console.log(e);
-      console.log(e.target);
-      console.log("Target id: " + e.target.id); 
-      */
+
       this.setState({
         count: this.state.count + 1,
         prevSelection: e.target.id,
@@ -36,21 +31,20 @@ export default class Story extends React.Component {
   render() {
     // Gets matching id object from data.json
     const d = data.find(el => el.id === this.state.currentId);
-    /* 
-    console.log(this.state);
-    console.log(d); 
-    */
+
     return (
-      <>
-        <p>{d.historia}</p>
-        <div>
+      <div className="layout">
+        <h1 className="historia">{d.historia}</h1>
+        
+        <div className="opciones">
           <StoryOption id="A" desc={d.opciones.a} onSelect={this.handleSelect} />
           <StoryOption id="B" desc={d.opciones.b} onSelect={this.handleSelect} />
         </div>
-        <div>
+
+        <div className="recordatorio">
           <StoryLog prevSelection={this.state.prevSelection} />
         </div>
-      </>
+      </div>
     )
   }
 }

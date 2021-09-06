@@ -2,8 +2,8 @@
   margin: 0;
   box-sizing: border-box;
   background-color: black;
-  color: white;
 }
+
 .layout {
   height: 100vh;
   max-width: 500px;

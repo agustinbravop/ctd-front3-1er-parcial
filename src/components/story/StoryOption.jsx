@@ -6,12 +6,12 @@ export default class StoryOption extends React.Component {
     const {id, desc, onSelect} = this.props;
 
     return (
-      <React.Fragment>
-        <button id={id} onClick={onSelect}>
+      <div className="opcion">
+        <button className="botones" id={id} onClick={onSelect}>
           {id}
         </button>
-        <p>{desc}</p>
-      </React.Fragment>
+        <h2>{desc}</h2>
+      </div>
     )
   }
 }
