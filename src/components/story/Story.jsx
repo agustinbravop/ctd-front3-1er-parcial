@@ -13,11 +13,13 @@ export default class Story extends React.Component {
   }
 
   handleSelect = e => {
-    // Matches id from data.json's id
     if(this.state.count > 4) {
+      // count represents the progress into the story.
+      // At 4, the story has ended.
       alert("Fin.");
     } 
     else {
+      // currentId match data.json's next id
       const currentId = this.state.count + 1 + e.target.id.toLowerCase();
 
       this.setState({
@@ -29,13 +31,13 @@ export default class Story extends React.Component {
   }
 
   render() {
-    // Gets matching id object from data.json
+    // Gets object from data.json that matches id
     const d = data.find(el => el.id === this.state.currentId);
 
     return (
       <div className="layout">
         <h1 className="historia">{d.historia}</h1>
-        
+
         <div className="opciones">
           <StoryOption id="A" desc={d.opciones.a} onSelect={this.handleSelect} />
           <StoryOption id="B" desc={d.opciones.b} onSelect={this.handleSelect} />
