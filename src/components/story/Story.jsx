@@ -15,11 +15,11 @@ export default class Story extends React.Component {
   handleSelect = e => {
     if(this.state.count > 4) {
       // count represents the progress into the story.
-      // At 4, the story has ended.
+      // At 4, the story ends.
       alert("Fin.");
     } 
     else {
-      // currentId match data.json's next id
+      // currentId matches data.json's next id
       const currentId = this.state.count + 1 + e.target.id.toLowerCase();
 
       this.setState({

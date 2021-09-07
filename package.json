@@ -1,6 +1,6 @@
 {
-  "name": "1er_parcial_bravo_perez",
-  "version": "0.1.0",
+  "name": "ctd_front3_1er_parcial",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
