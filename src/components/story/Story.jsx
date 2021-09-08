@@ -1,10 +1,9 @@
-import React from "react";
+import { Component } from "react";
 import StoryLog from "./StoryLog";
 import StoryOption from "./StoryOption";
-import "../../index.css";
 import data from "../data.json";
 
-export default class Story extends React.Component {
+export default class Story extends Component {
 
   state = {
     count: 1,

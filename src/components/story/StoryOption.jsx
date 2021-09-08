@@ -1,6 +1,6 @@
-import React from 'react';
+import { Component } from 'react';
 
-export default class StoryOption extends React.Component {
+export default class StoryOption extends Component {
   
   render() {
     const {id, desc, onSelect} = this.props;
