@@ -1,8 +1,8 @@
 {
-  "name": "ctd_front3_1er_parcial",
+  "name": "ctd-front3-1er-parcial",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://agustinbravop.github.io/ctd_front3_1er_parcial",
+  "homepage": "http://agustinbravop.github.io/ctd-front3-1er-parcial",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
