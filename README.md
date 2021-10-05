@@ -3,7 +3,7 @@
 ## 1er Entregable
 
 [Link](https://github.com/Ivanszs/ctd-frontend3-primer-evaluacion) a la consigna\
-[Deploy](https://agustinbravop.github.io/ctd_front3_1er_parcial) en Github Pages
+[Deploy](https://agustinbravop.github.io/ctd-front3-1er-parcial) en Github Pages
 
 ### Proceso
 (Tener en cuenta que el proceso fue iterativo, y hubo corrección de errores y refactoreo)
